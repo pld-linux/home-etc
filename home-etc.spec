@@ -1,7 +1,7 @@
 Summary:	HOME-ETC support for PLD Linux
 Summary(pl):	Wsparcie mechanizmu HOME-ETC dla PLD Linux
 Name:		home-etc
-Version:	1.0.7
+Version:	1.0.8
 Release:	1
 Epoch:		1
 License:	LGPL
@@ -9,7 +9,7 @@ Group:		Base
 Requires:	coreutils
 Requires:	shadow
 Source0:	ftp://ftp.pld-linux.org/people/siefca/distfiles/%{name}-%{version}.tar.gz
-# Source0-md5:	86e5943623122764df55f347bb133eb3
+# Source0-md5:	ee5c22192dd83240b3c076e444b7f690
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
