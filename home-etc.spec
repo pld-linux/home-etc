@@ -9,7 +9,7 @@ Group:		Base
 Requires:	coreutils
 Requires:	shadow
 Source0:	ftp://ftp.pld-linux.org/people/siefca/distfiles/%{name}-%{version}.tar.gz
-# Source0-md5:	bb8787aa10d9943cbe5064cb61ef8e08
+# Source0-md5:	f6cc773ed7a552ee33b2834c9801a335
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
