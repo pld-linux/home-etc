@@ -7,7 +7,7 @@ Epoch:		1
 License:	LGPL
 Group:		Base
 Source0:	ftp://ftp.pld-linux.org/people/siefca/distfiles/%{name}-%{version}.tar.gz
-# Source0-md5:	842334f687772460662315426ad64287
+# Source0-md5:	628d3acd77458e291f753992d81977c4
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
