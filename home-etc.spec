@@ -2,14 +2,14 @@ Summary:	HOME-ETC support programs and libraries
 Summary(pl):	Biblioteki i programy zapewniaj±ce wsparcie dla HOME-ETC
 Name:		home-etc
 Version:	1.0.8
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL
 Group:		Base
 Requires:	coreutils
 Requires:	shadow
 Source0:	ftp://ftp.pld-linux.org/people/siefca/distfiles/%{name}-%{version}.tar.gz
-# Source0-md5:	78b644c45a4808a8be235004b7b0ff86
+# Source0-md5:	f7a80631099280f331ab398725c5582f
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
