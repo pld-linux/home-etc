@@ -1,0 +1,6 @@
+- serious code reorganization
+- added macros for easier usage (_HE, _HEdir, _HEn, _HEndir, ___HE, ___HEdir)
+- home_etc_path() parses now uses caching get_home_etc_static()
+- added home_etc_reset() which may be used to flush the cache
+- examples added
+- documentation updated
