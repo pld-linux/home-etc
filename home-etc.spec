@@ -1,5 +1,5 @@
-Summary:	HOME-ETC support for PLD Linux
-Summary(pl):	Wsparcie mechanizmu HOME-ETC dla PLD Linux
+Summary:	HOME-ETC support programs and libraries
+Summary(pl):	Biblioteki i programy zapewniaj±ce wsparcie dla HOME-ETC
 Name:		home-etc
 Version:	1.0.8
 Release:	1
@@ -9,7 +9,7 @@ Group:		Base
 Requires:	coreutils
 Requires:	shadow
 Source0:	ftp://ftp.pld-linux.org/people/siefca/distfiles/%{name}-%{version}.tar.gz
-# Source0-md5:	ee5c22192dd83240b3c076e444b7f690
+# Source0-md5:	78b644c45a4808a8be235004b7b0ff86
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -81,10 +81,13 @@ które wyja¶niaj± w jaki sposób modyfikowaæ istniej±ce aplikacje.
 %setup -q
 
 %build
-%{__make} \
-	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} \$(WARN)"
-
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
