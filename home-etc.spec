@@ -1,15 +1,15 @@
 Summary:	HOME-ETC support for PLD Linux
 Summary(pl):	Wsparcie mechanizmu HOME-ETC dla PLD Linux
 Name:		home-etc
-Version:	1.0.4
-Release:	2
+Version:	1.0.6
+Release:	8
 Epoch:		1
 License:	LGPL
 Group:		Base
 Requires:	coreutils
 Requires:	shadow
 Source0:	ftp://ftp.pld-linux.org/people/siefca/distfiles/%{name}-%{version}.tar.gz
-# Source0-md5:	47e792af9a138e1faccb3aca970e6712
+# Source0-md5:	bb8787aa10d9943cbe5064cb61ef8e08
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -91,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libdir}
 install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT%{_mandir}/man3
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 install -d $RPM_BUILD_ROOT/etc/profile.d
 install -d $RPM_BUILD_ROOT/etc/skel
@@ -103,7 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc FILES README CONTRIBUTORS AUTHORS COPYING TODO HOME-ETC.pl.txt
+%doc README CONTRIBUTORS AUTHORS COPYING doc/HOME-ETC.pl.txt
 %attr(755,root,root) %{_libdir}/lib*.so*
 %attr(755,root,root) %{_libdir}/lib*.la
 %attr(755,root,root) %{_bindir}/*
@@ -112,8 +113,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc DEVEL-NOTES
+%doc doc/DEVEL-NOTES AUTHORS CONTRIBUTORS COPYING FILES TODO
 %{_includedir}/*.h
+%{_mandir}/man3/*
 
 %files static
 %defattr(644,root,root,755)
