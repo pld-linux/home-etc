@@ -2,7 +2,7 @@ Summary:	HOME-ETC support for PLD Linux
 Summary(pl):	Wsparcie mechanizmu HOME-ETC dla PLD Linux
 Name:		home-etc
 Version:	1.0.4
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL
 Group:		Base
