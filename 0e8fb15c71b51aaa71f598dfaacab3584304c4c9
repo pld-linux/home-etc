@@ -1,0 +1,4 @@
+- code reorganization at wrappers section
+- directory wrappers are now returning HOME instead of NULL pointer
+- tests expanded
+- documentation fixed and updated
