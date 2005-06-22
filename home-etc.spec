@@ -2,7 +2,7 @@ Summary:	HOME-ETC support programs and scripts
 Summary(pl):	Skrypty i programy zapewniaj±ce wsparcie dla HOME-ETC
 Name:		home-etc
 Version:	1.0.9
-Release:	2
+Release:	3
 Epoch:		1
 License:	LGPL
 Group:		Base
@@ -11,9 +11,9 @@ Source0:	ftp://ftp.pld-linux.org/people/siefca/distfiles/%{name}-%{version}.tar.
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
+Requires:	%{name}-lib = %{epoch}:%{version}-%{release}
 Requires:	coreutils
 Requires:	shadow
-Requires:	%{name}-lib = %{epoch}:%{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_libdir		/%{_lib}
@@ -34,7 +34,7 @@ mechanizmu.
 Summary:	HOME-ETC Library
 Summary(pl):	Biblioteka mechanizmu HOME-ETC
 License:	LGPL
-Group:		Development/Libraries
+Group:		Libraries
 
 %description lib
 HOME-ETC is an idea to keep configuration files in a subdirectory
@@ -52,7 +52,7 @@ Summary:	Header files for HOME-ETC
 Summary(pl):	Pliki nag³ówkowe dla mechanizmu HOME-ETC
 License:	LGPL
 Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	%{name}-lib = %{epoch}:%{version}-%{release}
 
 %description devel
 HOME-ETC is an idea to keep configuration files in a subdirectory
@@ -126,13 +126,13 @@ ln -sf %{_libdir}/$(cd $RPM_BUILD_ROOT%{_libdir} ; echo libhome_etc.so.*.*.*) \
 %{__sed} "s|libdir='%{_libdir}'|libdir='%{_libexecdir}'|" \
         $RPM_BUILD_ROOT%{_libdir}/libhome_etc.la > $RPM_BUILD_ROOT%{_libexecdir}/libhome_etc.la 
 
-mv $RPM_BUILD_ROOT%{_libdir}/libhome_etc.a $RPM_BUILD_ROOT%{_libexecdir}/
+mv $RPM_BUILD_ROOT%{_libdir}/libhome_etc.a $RPM_BUILD_ROOT%{_libexecdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post lib   -p /sbin/ldconfig
-%postun lib -p /sbin/ldconfig
+%post	lib -p /sbin/ldconfig
+%postun	lib -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
