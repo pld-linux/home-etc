@@ -2,7 +2,7 @@ Summary:	HOME-ETC support programs and scripts
 Summary(pl):	Skrypty i programy zapewniaj±ce wsparcie dla HOME-ETC
 Name:		home-etc
 Version:	1.0.9
-Release:	3
+Release:	4
 Epoch:		1
 License:	LGPL
 Group:		Base
@@ -15,9 +15,6 @@ Requires:	%{name}-lib = %{epoch}:%{version}-%{release}
 Requires:	coreutils
 Requires:	shadow
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_libdir		/%{_lib}
-%define		_libexecdir	/usr/%{_lib}
 
 %description
 HOME-ETC is an idea to keep configuration files in a subdirectory
@@ -120,14 +117,6 @@ install -d $RPM_BUILD_ROOT%{_libexecdir}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libexecdir}/lib*.so
-ln -sf %{_libdir}/$(cd $RPM_BUILD_ROOT%{_libdir} ; echo libhome_etc.so.*.*.*) \
-        $RPM_BUILD_ROOT%{_libexecdir}/libhome_etc.so
-%{__sed} "s|libdir='%{_libdir}'|libdir='%{_libexecdir}'|" \
-        $RPM_BUILD_ROOT%{_libdir}/libhome_etc.la > $RPM_BUILD_ROOT%{_libexecdir}/libhome_etc.la 
-
-mv $RPM_BUILD_ROOT%{_libdir}/libhome_etc.a $RPM_BUILD_ROOT%{_libexecdir}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -148,14 +137,14 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %doc doc/DEVEL-NOTES FILES TODO
-%attr(755,root,root) %{_libexecdir}/lib*.so
-%{_libexecdir}/lib*.la
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/*.h
 %{_mandir}/man3/*
 
 %files static
 %defattr(644,root,root,755)
-%{_libexecdir}/lib*.a
+%{_libdir}/lib*.a
 
 %files examples
 %defattr(644,root,root,755)
