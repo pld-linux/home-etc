@@ -1,5 +1,5 @@
 Summary:	HOME-ETC support programs and scripts
-Summary(pl):	Skrypty i programy zapewniaj±ce wsparcie dla HOME-ETC
+Summary(pl.UTF-8):   Skrypty i programy zapewniajÄ…ce wsparcie dla HOME-ETC
 Name:		home-etc
 Version:	1.0.9
 Release:	4
@@ -21,15 +21,15 @@ HOME-ETC is an idea to keep configuration files in a subdirectory
 specified by user, instead of its home directory. This package
 provides support for it.
 
-%description -l pl
-HOME-ETC jest pomys³em, aby przechowywaæ pliki konfiguracyjne
-w podkatalogu wskazanym przez u¿ytkownika, zamiast bezpo¶rednio
+%description -l pl.UTF-8
+HOME-ETC jest pomysÅ‚em, aby przechowywaÄ‡ pliki konfiguracyjne
+w podkatalogu wskazanym przez uÅ¼ytkownika, zamiast bezpoÅ›rednio
 w jego katalogu domowym. Pakiet ten zapewnia wsparcie dla tego
 mechanizmu.
 
 %package lib
 Summary:	HOME-ETC Library
-Summary(pl):	Biblioteka mechanizmu HOME-ETC
+Summary(pl.UTF-8):   Biblioteka mechanizmu HOME-ETC
 License:	LGPL
 Group:		Libraries
 
@@ -38,15 +38,15 @@ HOME-ETC is an idea to keep configuration files in a subdirectory
 specified by user, instead of its home directory. This package
 contains shared HOME-ETC library.
 
-%description lib -l pl
-HOME-ETC jest pomys³em, aby przechowywaæ pliki konfiguracyjne
-w podkatalogu wskazanym przez u¿ytkownika, zamiast bezpo¶rednio
-w jego katalogu domowym. Pakiet ten zawiera bibliotekê dzielon±
+%description lib -l pl.UTF-8
+HOME-ETC jest pomysÅ‚em, aby przechowywaÄ‡ pliki konfiguracyjne
+w podkatalogu wskazanym przez uÅ¼ytkownika, zamiast bezpoÅ›rednio
+w jego katalogu domowym. Pakiet ten zawiera bibliotekÄ™ dzielonÄ…
 HOME-ETC.
 
 %package devel
 Summary:	Header files for HOME-ETC
-Summary(pl):	Pliki nag³ówkowe dla mechanizmu HOME-ETC
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe dla mechanizmu HOME-ETC
 License:	LGPL
 Group:		Development/Libraries
 Requires:	%{name}-lib = %{epoch}:%{version}-%{release}
@@ -56,15 +56,15 @@ HOME-ETC is an idea to keep configuration files in a subdirectory
 specified by user, instead of its home directory. This package
 contains header files needed to build HOME-ETC-compliant applications.
 
-%description devel -l pl
-HOME-ETC jest pomys³em, aby przechowywaæ pliki konfiguracyjne
-w podkatalogu wskazanym przez u¿ytkownika, zamiast bezpo¶rednio
-w jego katalogu domowym. Pakiet ten zawiera pliki nag³ówkowe
+%description devel -l pl.UTF-8
+HOME-ETC jest pomysÅ‚em, aby przechowywaÄ‡ pliki konfiguracyjne
+w podkatalogu wskazanym przez uÅ¼ytkownika, zamiast bezpoÅ›rednio
+w jego katalogu domowym. Pakiet ten zawiera pliki nagÅ‚Ã³wkowe
 potrzebne do budowania aplikacji zgodnych z HOME-ETC.
 
 %package static
 Summary:	Static version of HOME-ETC library
-Summary(pl):	Wersja statyczna biblioteki HOME-ETC
+Summary(pl.UTF-8):   Wersja statyczna biblioteki HOME-ETC
 License:	LGPL
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
@@ -74,15 +74,15 @@ HOME-ETC is an idea to keep configuration files in a subdirectory
 specified by user, instead of its home directory. This package
 contains static version of the library.
 
-%description static -l pl
-HOME-ETC jest pomys³em, aby przechowywaæ pliki konfiguracyjne
-w podkatalogu wskazanym przez u¿ytkownika, zamiast bezpo¶rednio
-w jego katalogu domowym. Pakiet ten zawiera statyczn± wersjê
+%description static -l pl.UTF-8
+HOME-ETC jest pomysÅ‚em, aby przechowywaÄ‡ pliki konfiguracyjne
+w podkatalogu wskazanym przez uÅ¼ytkownika, zamiast bezpoÅ›rednio
+w jego katalogu domowym. Pakiet ten zawiera statycznÄ… wersjÄ™
 biblioteki.
 
 %package examples
 Summary:	Example files for HOME-ETC
-Summary(pl):	Pliki przyk³adów dla mechanizmu HOME-ETC
+Summary(pl.UTF-8):   Pliki przykÅ‚adÃ³w dla mechanizmu HOME-ETC
 License:	LGPL
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
@@ -92,11 +92,11 @@ HOME-ETC is an idea to keep configuration files in a subdirectory
 specified by user, instead of its home directory. This package
 contains examples, which explains how to modify existing applications.
 
-%description examples -l pl
-HOME-ETC jest pomys³em, aby przechowywaæ pliki konfiguracyjne
-w podkatalogu wskazanym przez u¿ytkownika, zamiast bezpo¶rednio
-w jego katalogu domowym. Pakiet ten zawiera pliki przyk³adów,
-które wyja¶niaj± w jaki sposób modyfikowaæ istniej±ce aplikacje.
+%description examples -l pl.UTF-8
+HOME-ETC jest pomysÅ‚em, aby przechowywaÄ‡ pliki konfiguracyjne
+w podkatalogu wskazanym przez uÅ¼ytkownika, zamiast bezpoÅ›rednio
+w jego katalogu domowym. Pakiet ten zawiera pliki przykÅ‚adÃ³w,
+ktÃ³re wyjaÅ›niajÄ… w jaki sposÃ³b modyfikowaÄ‡ istniejÄ…ce aplikacje.
 
 %prep
 %setup -q
