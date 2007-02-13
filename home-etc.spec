@@ -1,5 +1,5 @@
 Summary:	HOME-ETC support programs and scripts
-Summary(pl.UTF-8):   Skrypty i programy zapewniające wsparcie dla HOME-ETC
+Summary(pl.UTF-8):	Skrypty i programy zapewniające wsparcie dla HOME-ETC
 Name:		home-etc
 Version:	1.0.9
 Release:	4
@@ -29,7 +29,7 @@ mechanizmu.
 
 %package lib
 Summary:	HOME-ETC Library
-Summary(pl.UTF-8):   Biblioteka mechanizmu HOME-ETC
+Summary(pl.UTF-8):	Biblioteka mechanizmu HOME-ETC
 License:	LGPL
 Group:		Libraries
 
@@ -46,7 +46,7 @@ HOME-ETC.
 
 %package devel
 Summary:	Header files for HOME-ETC
-Summary(pl.UTF-8):   Pliki nagłówkowe dla mechanizmu HOME-ETC
+Summary(pl.UTF-8):	Pliki nagłówkowe dla mechanizmu HOME-ETC
 License:	LGPL
 Group:		Development/Libraries
 Requires:	%{name}-lib = %{epoch}:%{version}-%{release}
@@ -64,7 +64,7 @@ potrzebne do budowania aplikacji zgodnych z HOME-ETC.
 
 %package static
 Summary:	Static version of HOME-ETC library
-Summary(pl.UTF-8):   Wersja statyczna biblioteki HOME-ETC
+Summary(pl.UTF-8):	Wersja statyczna biblioteki HOME-ETC
 License:	LGPL
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
@@ -82,7 +82,7 @@ biblioteki.
 
 %package examples
 Summary:	Example files for HOME-ETC
-Summary(pl.UTF-8):   Pliki przykładów dla mechanizmu HOME-ETC
+Summary(pl.UTF-8):	Pliki przykładów dla mechanizmu HOME-ETC
 License:	LGPL
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
