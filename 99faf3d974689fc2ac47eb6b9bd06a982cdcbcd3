@@ -1,0 +1,3 @@
+- autoheader added to autogen.sh script
+- std checks added to configure.ac
+- added includes.h with HAVE_ conditions
