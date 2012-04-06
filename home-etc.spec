@@ -4,11 +4,11 @@ Name:		home-etc
 Version:	1.0.9
 Release:	5
 Epoch:		1
-License:	LGPL
+License:	LGPL v2+
 Group:		Base
 Source0:	ftp://ftp.pld-linux.org/people/siefca/distfiles/%{name}-%{version}.tar.gz
 # Source0-md5:	628d3acd77458e291f753992d81977c4
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
 Requires:	%{name}-lib = %{epoch}:%{version}-%{release}
@@ -126,25 +126,27 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS CONTRIBUTORS README doc/HOME-ETC.pl.txt
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/home-etc
 %attr(755,root,root) /etc/profile.d/home-etc.*sh
 /etc/skel/.home_etc
 
 %files lib
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libhome_etc.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libhome_etc.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/DEVEL-NOTES FILES TODO
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/*.h
-%{_mandir}/man3/*
+%attr(755,root,root) %{_libdir}/libhome_etc.so
+%{_libdir}/libhome_etc.la
+%{_includedir}/home_etc.h
+%{_mandir}/man3/get_home_etc.3*
+%{_mandir}/man3/home_etc*.3*
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libhome_etc.a
 
 %files examples
 %defattr(644,root,root,755)
