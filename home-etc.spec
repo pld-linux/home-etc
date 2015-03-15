@@ -2,7 +2,7 @@ Summary:	HOME-ETC support programs and scripts
 Summary(pl.UTF-8):	Skrypty i programy zapewniające wsparcie dla HOME-ETC
 Name:		home-etc
 Version:	1.0.9
-Release:	5
+Release:	6
 Epoch:		1
 License:	LGPL v2+
 Group:		Base
